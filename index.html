@@ -15,12 +15,28 @@
       align-items: center;
       justify-content: center;
     }
+     .container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+    p {
+      color: white;
+    }
   </style>
 </head>
 <body>
   <!-- Рисуем игровое поле -->
   <canvas width="750" height="585" id="game"></canvas>
-  <script src="jsfile.js">   
+  <div class="container">
+      <p>Левая платформа - W/S
+      Правая платформа - Стрелка вверх/Стрелка вниз</p>
+    </div>
+  <script src="../js/field.js">   
+  </script>
+  <script src="../js/game.js">   
   </script>
 </body>
 </html>
