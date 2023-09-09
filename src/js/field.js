@@ -9,7 +9,8 @@ const paddleHeight = grid * 5; // 80
 // Задаём максимальное расстояние, на которое может подняться платформа
 const maxPaddleY = canvas.height - grid - paddleHeight;
 // Скорость платформы
-var paddleSpeed = 2;
+var leftPaddleSpeed = 5;
+var rightPaddleSpeed = 3;
 // Скорость мяча
 var ballSpeed = 1.5;
 // Описываем левую платформу
