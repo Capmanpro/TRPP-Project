@@ -9,7 +9,8 @@ const paddleHeight = grid * 5; // 80
 // Задаём максимальное расстояние, на которое может подняться платформа
 const maxPaddleY = canvas.height - grid - paddleHeight;
 // Скорость платформы
-var paddleSpeed = 4;
+var leftPaddleSpeed = 4;
+var rightPaddleSpeed = 2
 // Скорость мяча
 var ballSpeed = 2;
 // Описываем левую платформу
@@ -141,22 +142,22 @@ function loop() {
     // Если нажата клавиша вверх,
     if (e.which === 38) {
       // то двигаем правую платформу вверх
-      rightPaddle.dy = -paddleSpeed;
+      rightPaddle.dy = -rightPaddleSpeed;
     }
     // Если нажата клавиша вниз,
     else if (e.which === 40) {
       // то двигаем правую платформу вниз
-      rightPaddle.dy = paddleSpeed;
+      rightPaddle.dy = rightPaddleSpeed;
     }
     // Если нажата клавиша W,
     if (e.which === 87) {
       // то двигаем левую платформу вверх
-      leftPaddle.dy = -paddleSpeed;
+      leftPaddle.dy = -leftPaddleSpeed;
     }
     // Если нажата клавиша S,
     else if (e.which === 83) {
       // то двигаем левую платформу вниз
-      leftPaddle.dy = paddleSpeed;
+      leftPaddle.dy = leftPaddleSpeed;
     }
   });
   // А теперь следим за тем, когда кто-то отпустит клавишу, чтобы остановить движение платформы
